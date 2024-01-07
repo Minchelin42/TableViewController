@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */; };
+		391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */; };
 		393C60972B49934A00F97898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C60962B49934A00F97898 /* AppDelegate.swift */; };
 		393C60992B49934A00F97898 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C60982B49934A00F97898 /* SceneDelegate.swift */; };
 		393C609B2B49934A00F97898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C609A2B49934A00F97898 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		393C60932B49934A00F97898 /* TableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393C60962B49934A00F97898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393C60982B49934A00F97898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				393C60A12B49934C00F97898 /* LaunchScreen.storyboard */,
 				393C60A42B49934C00F97898 /* Info.plist */,
 				393C60AA2B499D9600F97898 /* SettingTableViewController.swift */,
+				391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */,
+				391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */,
 			);
 			path = TableViewController;
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				393C60AB2B499D9600F97898 /* SettingTableViewController.swift in Sources */,
+				391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */,
 				393C609B2B49934A00F97898 /* ViewController.swift in Sources */,
+				391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */,
 				393C60972B49934A00F97898 /* AppDelegate.swift in Sources */,
 				393C60992B49934A00F97898 /* SceneDelegate.swift in Sources */,
 			);
