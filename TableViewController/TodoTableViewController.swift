@@ -10,6 +10,8 @@ import UIKit
 class TodoTableViewController: UITableViewController {
     
     var list = ["그립톡 구매", "사이다 구매","아이패트 최저가 알아보기", "침대 매트리스 가격 비교"]
+    var check = [false, false, false, false]
+    var star = [false, false, false, false]
 
     @IBOutlet var topInputView: UIView!
     @IBOutlet var inputTextField: UITextField!
@@ -42,6 +44,8 @@ class TodoTableViewController: UITableViewController {
     @IBAction func plusButtonTapped(_ sender: UIButton) {
         if inputTextField.text != "" {
             list.append(inputTextField.text!)
+            star.append(false)
+            check.append(false)
             tableView.reloadData()
             inputTextField.text = ""
         } else {
@@ -61,13 +65,18 @@ class TodoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath) as! TodoTableViewCell
         
-        cell.checkButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+        cell.checkButton.tag = indexPath.row
+        cell.starButton.tag = indexPath.row
+
         
+        var checkImage = check[indexPath.row] ? "checkmark.square.fill" : "checkmark.square"
+        var starImage = star[indexPath.row] ? "star.fill" : "star"
+        
+        cell.checkButton.setImage(UIImage(systemName: checkImage), for: .normal)
         cell.checkButton.tintColor = .black
         
-        cell.starButton.setImage(UIImage(systemName: "star"), for: .normal)
-        
-        cell.tintColor = .black
+        cell.starButton.setImage(UIImage(systemName: starImage), for: .normal)
+        cell.starButton.tintColor = .black
         
         cell.titleLabel.text = "\(list[indexPath.row])"
         cell.titleLabel.font = .systemFont(ofSize: 14, weight: .regular)
@@ -75,10 +84,24 @@ class TodoTableViewController: UITableViewController {
         cell.listView.backgroundColor = UIColor(named: "todoGray")
         cell.listView.layer.cornerRadius = 10
         
+        cell.starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
+        
+        cell.checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
+        
         
         return cell
     }
 
+    @objc func starButtonTapped(sender: UIButton){
+        star[sender.tag].toggle()
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
+    }
+    
+    @objc func checkButtonTapped(sender: UIButton){
+        check[sender.tag].toggle()
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
@@ -90,6 +113,8 @@ class TodoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             list.remove(at: indexPath.row)
+            star.remove(at: indexPath.row)
+            check.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }
