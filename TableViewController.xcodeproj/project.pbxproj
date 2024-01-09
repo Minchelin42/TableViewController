@@ -20,6 +20,7 @@
 		391F31FB2B4D4C85006DA19B /* Travel2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31F92B4D4C85006DA19B /* Travel2CollectionViewCell.swift */; };
 		391F31FC2B4D4C85006DA19B /* Travel2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391F31FA2B4D4C85006DA19B /* Travel2CollectionViewCell.xib */; };
 		391F31FE2B4D4C94006DA19B /* Travel2CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31FD2B4D4C94006DA19B /* Travel2CollectionViewController.swift */; };
+		391F32012B4D5C90006DA19B /* Travel3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F32002B4D5C90006DA19B /* Travel3ViewController.swift */; };
 		393C60972B49934A00F97898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C60962B49934A00F97898 /* AppDelegate.swift */; };
 		393C60992B49934A00F97898 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C60982B49934A00F97898 /* SceneDelegate.swift */; };
 		393C609B2B49934A00F97898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C609A2B49934A00F97898 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		391F31F92B4D4C85006DA19B /* Travel2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel2CollectionViewCell.swift; sourceTree = "<group>"; };
 		391F31FA2B4D4C85006DA19B /* Travel2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Travel2CollectionViewCell.xib; sourceTree = "<group>"; };
 		391F31FD2B4D4C94006DA19B /* Travel2CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel2CollectionViewController.swift; sourceTree = "<group>"; };
+		391F32002B4D5C90006DA19B /* Travel3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel3ViewController.swift; sourceTree = "<group>"; };
 		393C60932B49934A00F97898 /* TableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393C60962B49934A00F97898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393C60982B49934A00F97898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Travel2;
 			sourceTree = "<group>";
 		};
+		391F31FF2B4D5B93006DA19B /* Travel3 */ = {
+			isa = PBXGroup;
+			children = (
+				391F32002B4D5C90006DA19B /* Travel3ViewController.swift */,
+			);
+			path = Travel3;
+			sourceTree = "<group>";
+		};
 		393C608A2B49934A00F97898 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		393C60952B49934A00F97898 /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				391F31FF2B4D5B93006DA19B /* Travel3 */,
 				391F31F62B4D4C4F006DA19B /* Travel2 */,
 				391F31F52B4D4C3E006DA19B /* Travel */,
 				391F31EF2B4D4BDC006DA19B /* Magazine */,
@@ -224,6 +235,7 @@
 				391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */,
 				391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */,
 				391F31D22B4BF038006DA19B /* MagazineTableViewController.swift in Sources */,
+				391F32012B4D5C90006DA19B /* Travel3ViewController.swift in Sources */,
 				391F31F42B4D4C15006DA19B /* MagazineInfo.swift in Sources */,
 				391F31FE2B4D4C94006DA19B /* Travel2CollectionViewController.swift in Sources */,
 				391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */,

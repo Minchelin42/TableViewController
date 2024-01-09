@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bej-AG-7TI">
-                        <rect key="frame" x="10" y="235" width="215" height="82"/>
+                        <rect key="frame" x="10" y="233" width="215" height="84"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uce-4w-41K">
                                 <rect key="frame" x="10" y="10" width="195" height="20"/>
@@ -36,9 +36,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcz-aX-5Ck">
-                                <rect key="frame" x="10" y="32" width="195" height="42"/>
+                                <rect key="frame" x="10" y="32" width="195" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="tcz-aX-5Ck" secondAttribute="height" multiplier="65:14" id="OH8-IO-sRH"/>
+                                    <constraint firstAttribute="width" secondItem="tcz-aX-5Ck" secondAttribute="height" multiplier="65:15" id="OH8-IO-sRH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -65,7 +65,7 @@
                 <constraint firstAttribute="trailing" secondItem="jpn-GD-lTY" secondAttribute="trailing" constant="10" id="agD-zM-1qc"/>
                 <constraint firstItem="Bej-AG-7TI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="cSC-q4-Cv1"/>
                 <constraint firstAttribute="trailing" secondItem="Bej-AG-7TI" secondAttribute="trailing" constant="10" id="r09-fJ-5oF"/>
-                <constraint firstItem="Bej-AG-7TI" firstAttribute="top" secondItem="jpn-GD-lTY" secondAttribute="bottom" constant="10" id="tzs-XP-VYN"/>
+                <constraint firstItem="Bej-AG-7TI" firstAttribute="top" secondItem="jpn-GD-lTY" secondAttribute="bottom" constant="8" id="tzs-XP-VYN"/>
             </constraints>
             <size key="customSize" width="235" height="327"/>
             <connections>
