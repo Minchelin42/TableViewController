@@ -13,6 +13,9 @@
 		391F31D22B4BF038006DA19B /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31D12B4BF038006DA19B /* MagazineTableViewController.swift */; };
 		391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31D32B4BF075006DA19B /* MagazineTableViewCell.swift */; };
 		391F31D72B4BF541006DA19B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 391F31D62B4BF541006DA19B /* Kingfisher */; };
+		391F31E82B4D30D7006DA19B /* TravelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31E72B4D30D7006DA19B /* TravelCollectionViewController.swift */; };
+		391F31EA2B4D3105006DA19B /* TravelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31E92B4D3105006DA19B /* TravelCollectionViewCell.swift */; };
+		391F31EC2B4D39C7006DA19B /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31EB2B4D39C7006DA19B /* CityInfo.swift */; };
 		393C60972B49934A00F97898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C60962B49934A00F97898 /* AppDelegate.swift */; };
 		393C60992B49934A00F97898 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C60982B49934A00F97898 /* SceneDelegate.swift */; };
 		393C609B2B49934A00F97898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C609A2B49934A00F97898 /* ViewController.swift */; };
@@ -28,6 +31,9 @@
 		391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = ../../../../Downloads/MagazineInfo.swift; sourceTree = "<group>"; };
 		391F31D12B4BF038006DA19B /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		391F31D32B4BF075006DA19B /* MagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewCell.swift; sourceTree = "<group>"; };
+		391F31E72B4D30D7006DA19B /* TravelCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCollectionViewController.swift; sourceTree = "<group>"; };
+		391F31E92B4D3105006DA19B /* TravelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCollectionViewCell.swift; sourceTree = "<group>"; };
+		391F31EB2B4D39C7006DA19B /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityInfo.swift; path = ../../../../Downloads/CityInfo.swift; sourceTree = "<group>"; };
 		393C60932B49934A00F97898 /* TableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		393C60962B49934A00F97898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		393C60982B49934A00F97898 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 				391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */,
 				391F31D12B4BF038006DA19B /* MagazineTableViewController.swift */,
 				391F31D32B4BF075006DA19B /* MagazineTableViewCell.swift */,
+				391F31E72B4D30D7006DA19B /* TravelCollectionViewController.swift */,
+				391F31E92B4D3105006DA19B /* TravelCollectionViewCell.swift */,
+				391F31EB2B4D39C7006DA19B /* CityInfo.swift */,
 			);
 			path = TableViewController;
 			sourceTree = "<group>";
@@ -172,6 +181,9 @@
 				391F31D22B4BF038006DA19B /* MagazineTableViewController.swift in Sources */,
 				391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */,
 				393C60972B49934A00F97898 /* AppDelegate.swift in Sources */,
+				391F31EA2B4D3105006DA19B /* TravelCollectionViewCell.swift in Sources */,
+				391F31E82B4D30D7006DA19B /* TravelCollectionViewController.swift in Sources */,
+				391F31EC2B4D39C7006DA19B /* CityInfo.swift in Sources */,
 				393C60992B49934A00F97898 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
