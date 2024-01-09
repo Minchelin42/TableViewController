@@ -3,4 +3,114 @@
    uuid = "83710A1A-048C-41BC-B9E1-B29822717593"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C1CD107-9919-4267-9851-B2640D52A9DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TableViewController/Magazine/MagazineTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "MagazineTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1C1CD107-9919-4267-9851-B2640D52A9DA - c846f27c9ddd9568"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewController.MagazineTableViewCell.travelImage.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "TableViewController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/min/Desktop/SeSAC_iOS/TableViewController/TableViewController/Magazine/MagazineTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "1C1CD107-9919-4267-9851-B2640D52A9DA - 3d25db5031e4994"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewController.MagazineTableViewCell.travelImage.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "TableViewController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/min/Desktop/SeSAC_iOS/TableViewController/TableViewController/Magazine/MagazineTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "1C1CD107-9919-4267-9851-B2640D52A9DA - b3a4a7ec550832f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewController.MagazineTableViewCell.travelImage.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "TableViewController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/min/Desktop/SeSAC_iOS/TableViewController/TableViewController/Magazine/MagazineTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "1C1CD107-9919-4267-9851-B2640D52A9DA - a4d1983aead0db4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewController.MagazineTableViewCell.travelImage.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TableViewController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/min/Desktop/SeSAC_iOS/TableViewController/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "1C1CD107-9919-4267-9851-B2640D52A9DA - 4bca58184df8b429"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewController.MagazineTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; TableViewController.MagazineTableViewCell"
+                  moduleName = "TableViewController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/min/Desktop/SeSAC_iOS/TableViewController/TableViewController/Magazine/MagazineTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "1C1CD107-9919-4267-9851-B2640D52A9DA - b5c2f6d7b06fa6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewController.MagazineTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TableViewController.MagazineTableViewCell&gt;"
+                  moduleName = "TableViewController"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/min/Desktop/SeSAC_iOS/TableViewController/TableViewController/Magazine/MagazineTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
