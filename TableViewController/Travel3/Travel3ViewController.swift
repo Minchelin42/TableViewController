@@ -32,7 +32,10 @@ class Travel3ViewController: UIViewController, UICollectionViewDelegate, UIColle
     
         let url = URL(string: city.city_image)
         cell.cityImage.kf.setImage(with: url)
-        cell.cityImage.layer.cornerRadius =  cell.cityImage.frame.width / 2
+        
+        DispatchQueue.main.async {
+            cell.cityImage.layer.cornerRadius = cell.cityImage.frame.width / 2
+        }
 
         cell.cityLabel.text = "\(city.city_name) | \(city.city_english_name)"
         
@@ -69,9 +72,9 @@ class Travel3ViewController: UIViewController, UICollectionViewDelegate, UIColle
         let spacing: CGFloat = 8
         
         let cellWidth = UIScreen.main.bounds.width - (spacing * 3)
-        let cellHeight = UIScreen.main.bounds.height / 3.3
+        let cellHeight = (cellWidth / 2) * 1.3
         
-        layout.itemSize = CGSize(width: cellWidth / 2, height: cellWidth / 2 + 100)
+        layout.itemSize = CGSize(width: cellWidth / 2, height: cellHeight)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
