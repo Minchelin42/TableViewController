@@ -25,6 +25,8 @@ class Travel2CollectionViewController: UICollectionViewController {
         let cellWidth = UIScreen.main.bounds.width - (spacing * 3)
         let cellHeight = UIScreen.main.bounds.height
         
+        print(cellHeight)
+        
         layout.itemSize = CGSize(width: cellWidth / 2, height: cellHeight * 0.28)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing

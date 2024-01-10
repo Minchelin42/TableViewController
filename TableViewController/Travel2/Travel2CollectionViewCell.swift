@@ -16,7 +16,7 @@ class Travel2CollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         cityImage.contentMode = .scaleAspectFill
 
         cityLabel.font = .systemFont(ofSize: 15, weight: .bold)

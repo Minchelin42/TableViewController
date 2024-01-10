@@ -37,7 +37,7 @@ class Travel3ViewController: UIViewController, UICollectionViewDelegate, UIColle
         cell.cityLabel.text = "\(city.city_name) | \(city.city_english_name)"
         
         cell.cityListLabel.text = "\(city.city_explain)"
-
+        
         return cell
     }
 
@@ -69,9 +69,9 @@ class Travel3ViewController: UIViewController, UICollectionViewDelegate, UIColle
         let spacing: CGFloat = 8
         
         let cellWidth = UIScreen.main.bounds.width - (spacing * 3)
-        let cellHeight = UIScreen.main.bounds.height
+        let cellHeight = UIScreen.main.bounds.height / 3.3
         
-        layout.itemSize = CGSize(width: cellWidth / 2, height: cellHeight * 0.28)
+        layout.itemSize = CGSize(width: cellWidth / 2, height: cellWidth / 2 + 100)
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
