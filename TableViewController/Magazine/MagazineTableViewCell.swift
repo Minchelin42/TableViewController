@@ -14,5 +14,15 @@ class MagazineTableViewCell: UITableViewCell {
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
+    override func awakeFromNib() {
+
+        travelImage.setMagazineImage()
+
+        titleLabel.setMagazineTitleLabel()
+        subtitleLabel.setMagazineSubTitleLabel()
+
+        dateLabel.setDateLabel()
+    }
+    
 }
 

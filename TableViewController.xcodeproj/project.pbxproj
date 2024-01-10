@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39118A322B4EB85F0031E2F1 /* MagazineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A312B4EB85E0031E2F1 /* MagazineProtocol.swift */; };
+		39118A342B4EB8700031E2F1 /* MagazineExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A332B4EB8700031E2F1 /* MagazineExtension.swift */; };
+		39118A362B4EB8A50031E2F1 /* TravelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A352B4EB8A50031E2F1 /* TravelProtocol.swift */; };
+		39118A382B4EB8AF0031E2F1 /* TravelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A372B4EB8AF0031E2F1 /* TravelExtension.swift */; };
 		391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */; };
 		391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */; };
 		391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39118A312B4EB85E0031E2F1 /* MagazineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineProtocol.swift; sourceTree = "<group>"; };
+		39118A332B4EB8700031E2F1 /* MagazineExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineExtension.swift; sourceTree = "<group>"; };
+		39118A352B4EB8A50031E2F1 /* TravelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelProtocol.swift; sourceTree = "<group>"; };
+		39118A372B4EB8AF0031E2F1 /* TravelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelExtension.swift; sourceTree = "<group>"; };
 		391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = ../../../../Downloads/MagazineInfo.swift; sourceTree = "<group>"; };
@@ -82,6 +90,8 @@
 				391F31D12B4BF038006DA19B /* MagazineTableViewController.swift */,
 				391F31D32B4BF075006DA19B /* MagazineTableViewCell.swift */,
 				391F31F32B4D4C15006DA19B /* MagazineInfo.swift */,
+				39118A312B4EB85E0031E2F1 /* MagazineProtocol.swift */,
+				39118A332B4EB8700031E2F1 /* MagazineExtension.swift */,
 			);
 			path = Magazine;
 			sourceTree = "<group>";
@@ -109,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				391F32002B4D5C90006DA19B /* Travel3ViewController.swift */,
+				39118A352B4EB8A50031E2F1 /* TravelProtocol.swift */,
+				39118A372B4EB8AF0031E2F1 /* TravelExtension.swift */,
 			);
 			path = Travel3;
 			sourceTree = "<group>";
@@ -232,17 +244,21 @@
 				393C60AB2B499D9600F97898 /* SettingTableViewController.swift in Sources */,
 				391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */,
 				393C609B2B49934A00F97898 /* ViewController.swift in Sources */,
+				39118A382B4EB8AF0031E2F1 /* TravelExtension.swift in Sources */,
 				391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */,
+				39118A362B4EB8A50031E2F1 /* TravelProtocol.swift in Sources */,
 				391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */,
 				391F31D22B4BF038006DA19B /* MagazineTableViewController.swift in Sources */,
 				391F32012B4D5C90006DA19B /* Travel3ViewController.swift in Sources */,
 				391F31F42B4D4C15006DA19B /* MagazineInfo.swift in Sources */,
+				39118A322B4EB85F0031E2F1 /* MagazineProtocol.swift in Sources */,
 				391F31FE2B4D4C94006DA19B /* Travel2CollectionViewController.swift in Sources */,
 				391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */,
 				393C60972B49934A00F97898 /* AppDelegate.swift in Sources */,
 				391F31FB2B4D4C85006DA19B /* Travel2CollectionViewCell.swift in Sources */,
 				391F31EA2B4D3105006DA19B /* TravelCollectionViewCell.swift in Sources */,
 				391F31E82B4D30D7006DA19B /* TravelCollectionViewController.swift in Sources */,
+				39118A342B4EB8700031E2F1 /* MagazineExtension.swift in Sources */,
 				391F31EC2B4D39C7006DA19B /* CityInfo.swift in Sources */,
 				393C60992B49934A00F97898 /* SceneDelegate.swift in Sources */,
 			);

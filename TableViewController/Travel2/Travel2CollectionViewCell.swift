@@ -17,15 +17,10 @@ class Travel2CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        cityImage.contentMode = .scaleAspectFill
+        cityImage.setCityImage()
+        cityLabel.setCityLabel()
+        cityListLabel.setCityListLabel()
 
-        cityLabel.font = .systemFont(ofSize: 15, weight: .bold)
-        cityLabel.textAlignment = .center
-        cityLabel.numberOfLines = 0
-
-        cityListLabel.font = .systemFont(ofSize: 12, weight: .semibold)
-        cityListLabel.textColor = .lightGray
-        cityListLabel.textAlignment = .center
-        cityListLabel.numberOfLines = 0
     }
 }
+
