@@ -10,5 +10,6 @@ import Foundation
 protocol MagazineViewProtocol {
     var navigationTitleString: String { get set }
     var tableCellHeight: CGFloat { get set }
+    var cellName: String { get set }
     func changeDateStyle(date: String) -> String
 }

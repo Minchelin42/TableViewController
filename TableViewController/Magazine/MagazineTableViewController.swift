@@ -12,6 +12,7 @@ class MagazineTableViewController: UITableViewController, MagazineViewProtocol {
     
     var navigationTitleString: String = "SeSAC TRAVEL"
     var tableCellHeight: CGFloat = 520
+    var cellName: String = "magazineCell"
     
     func changeDateStyle(date: String) -> String {
         let dateFormatter = DateFormatter()
@@ -42,7 +43,7 @@ class MagazineTableViewController: UITableViewController, MagazineViewProtocol {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "magazineCell", for: indexPath) as! MagazineTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! MagazineTableViewCell
         
         let magazine = magazine[indexPath.row]
         

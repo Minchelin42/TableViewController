@@ -10,6 +10,7 @@ import UIKit
 class Travel3ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, TravelProtocol {
     
     var navigationTitleString: String = "인기 도시"
+    var cellName: String = "Travel2CollectionViewCell"
     
     func setLayout() {
         let layout = UICollectionViewFlowLayout()
@@ -79,7 +80,7 @@ class Travel3ViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Travel2CollectionViewCell", for: indexPath) as! Travel2CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellName, for: indexPath) as! Travel2CollectionViewCell
         
         let city = city[indexPath.item]
     
@@ -107,8 +108,8 @@ class Travel3ViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         setSegment()
 
-        let xib = UINib(nibName: "Travel2CollectionViewCell", bundle: nil)
-        cityCollectionView.register(xib, forCellWithReuseIdentifier: "Travel2CollectionViewCell")
+        let xib = UINib(nibName: cellName, bundle: nil)
+        cityCollectionView.register(xib, forCellWithReuseIdentifier: cellName)
         
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self

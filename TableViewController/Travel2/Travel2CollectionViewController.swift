@@ -7,8 +7,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class Travel2CollectionViewController: UICollectionViewController {
 
     let city = CityInfo().city
