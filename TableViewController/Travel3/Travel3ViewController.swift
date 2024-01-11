@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Travel3ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, TravelProtocol {
+class Travel3ViewController: UIViewController, TravelProtocol {
     
     var navigationTitleString: String = "인기 도시"
     var cellName: String = "Travel2CollectionViewCell"
@@ -73,25 +73,6 @@ class Travel3ViewController: UIViewController, UICollectionViewDelegate, UIColle
     var koreaCity: [City] = []
     
     var notKoreaCity: [City] = []
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return city.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellName, for: indexPath) as! Travel2CollectionViewCell
-        
-        let city = city[indexPath.item]
-    
-        let url = URL(string: city.city_image)
-        cell.cityImage.kf.setImage(with: url)
-
-        cell.cityLabel.text = "\(city.city_name) | \(city.city_english_name)"
-        cell.cityListLabel.text = "\(city.city_explain)"
-        
-        return cell
-    }
 
     @IBOutlet var cityCollectionView: UICollectionView!
     @IBOutlet var selectSegment: UISegmentedControl!
@@ -122,4 +103,37 @@ class Travel3ViewController: UIViewController, UICollectionViewDelegate, UIColle
         segmentAction()
     }
     
+}
+
+extension Travel3ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return city.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellName, for: indexPath) as! Travel2CollectionViewCell
+        
+        let city = city[indexPath.item]
+    
+        let url = URL(string: city.city_image)
+        cell.cityImage.kf.setImage(with: url)
+
+        cell.cityLabel.text = "\(city.city_name) | \(city.city_english_name)"
+        cell.cityListLabel.text = "\(city.city_explain)"
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let sb = UIStoryboard(name: "Detail", bundle: nil)
+        
+        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+
+        navigationController?.pushViewController(vc, animated: true)
+
+
+    }
 }
