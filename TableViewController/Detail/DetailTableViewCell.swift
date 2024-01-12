@@ -16,6 +16,8 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var gradeLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var starImage: [UIImageView]!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,9 +33,11 @@ class DetailTableViewCell: UITableViewCell {
  
         gradeLabel.font = .systemFont(ofSize: 13, weight: .regular)
         gradeLabel.textColor = .lightGray
+        gradeLabel.backgroundColor = .clear
         
         heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
         heartButton.tintColor = .white
+    
 
     }
     

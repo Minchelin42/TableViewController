@@ -72,8 +72,33 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             cell.titleLabel.text = travel.title
             
             cell.descriptionLabel.text = travel.description
+            
+            let starGrade = travel.grade!
+            
+            var fillIndex = Int(starGrade)
+            var halfIndex = 0
+            
+            if starGrade - Double(Int(starGrade)) >= 0.5 { // 소수점 .5 이상일 때
+                halfIndex = 1
+            }
+            
+            for index in 0...4 {
+                if index < fillIndex {
+                    cell.starImage[index].image = UIImage(systemName: "star.fill")
+                } else if index == fillIndex {
+                    if halfIndex == 1 {
+                        cell.starImage[index].image = UIImage(systemName: "star.leadinghalf.filled")
+                    } else {
+                        cell.starImage[index].image = UIImage(systemName: "star")
+                    }
+                } else {
+                    cell.starImage[index].image = UIImage(systemName: "star")
+                }
+                
+                cell.starImage[index].tintColor = UIColor(named: "starYellow")
+            }
 
-            cell.gradeLabel.text = "별점\(travel.grade!)   저장(\(travel.save!))"
+            cell.gradeLabel.text = "(\(travel.grade!)) ∙ 저장(\(travel.save!))"
             
             return cell
         }
