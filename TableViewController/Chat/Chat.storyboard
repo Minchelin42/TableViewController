@@ -121,13 +121,13 @@
                         <viewLayoutGuide key="safeArea" id="dfF-g7-mG0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="sbF-py-wZ7" firstAttribute="top" secondItem="qu3-9n-Snp" secondAttribute="bottom" id="2Nt-Je-PUR"/>
                             <constraint firstAttribute="bottom" secondItem="sbF-py-wZ7" secondAttribute="bottom" id="3M1-FM-GUL"/>
                             <constraint firstItem="dfF-g7-mG0" firstAttribute="trailing" secondItem="sbF-py-wZ7" secondAttribute="trailing" id="Aiy-6C-3yO"/>
-                            <constraint firstItem="qu3-9n-Snp" firstAttribute="top" secondItem="dfF-g7-mG0" secondAttribute="top" id="LQN-Ro-dOe"/>
-                            <constraint firstItem="sbF-py-wZ7" firstAttribute="top" secondItem="qu3-9n-Snp" secondAttribute="bottom" id="Sa4-Ze-e9Z"/>
-                            <constraint firstItem="qu3-9n-Snp" firstAttribute="trailing" secondItem="dfF-g7-mG0" secondAttribute="trailing" id="eyT-NY-ke8"/>
+                            <constraint firstItem="qu3-9n-Snp" firstAttribute="leading" secondItem="dfF-g7-mG0" secondAttribute="leading" id="ClT-YK-Jzb"/>
+                            <constraint firstItem="qu3-9n-Snp" firstAttribute="top" secondItem="dfF-g7-mG0" secondAttribute="top" id="Uhu-Kd-gYt"/>
                             <constraint firstItem="sbF-py-wZ7" firstAttribute="leading" secondItem="dfF-g7-mG0" secondAttribute="leading" id="ppR-lE-IuW"/>
-                            <constraint firstItem="qu3-9n-Snp" firstAttribute="leading" secondItem="dfF-g7-mG0" secondAttribute="leading" id="sLw-kF-Dtq"/>
+                            <constraint firstItem="qu3-9n-Snp" firstAttribute="trailing" secondItem="dfF-g7-mG0" secondAttribute="trailing" id="zq9-o4-JJH"/>
                         </constraints>
                     </view>
                     <connections>

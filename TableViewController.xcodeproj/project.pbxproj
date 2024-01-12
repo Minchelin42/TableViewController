@@ -33,6 +33,8 @@
 		39118AB62B514D430031E2F1 /* ChatDetailUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118AB42B514D430031E2F1 /* ChatDetailUserTableViewCell.swift */; };
 		39118AB72B514D430031E2F1 /* ChatDetailUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39118AB52B514D430031E2F1 /* ChatDetailUserTableViewCell.xib */; };
 		39118ABA2B515DA10031E2F1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 39118AB92B515DA10031E2F1 /* IQKeyboardManagerSwift */; };
+		39118ABD2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118ABB2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift */; };
+		39118ABE2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39118ABC2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib */; };
 		391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */; };
 		391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */; };
 		391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */; };
@@ -80,6 +82,8 @@
 		39118AB12B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailFriendTableViewCell.xib; sourceTree = "<group>"; };
 		39118AB42B514D430031E2F1 /* ChatDetailUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailUserTableViewCell.swift; sourceTree = "<group>"; };
 		39118AB52B514D430031E2F1 /* ChatDetailUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailUserTableViewCell.xib; sourceTree = "<group>"; };
+		39118ABB2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailGroupTableViewCell.swift; sourceTree = "<group>"; };
+		39118ABC2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailGroupTableViewCell.xib; sourceTree = "<group>"; };
 		391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = ../../../../Downloads/MagazineInfo.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				39118AB12B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib */,
 				39118AB42B514D430031E2F1 /* ChatDetailUserTableViewCell.swift */,
 				39118AB52B514D430031E2F1 /* ChatDetailUserTableViewCell.xib */,
+				39118ABB2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift */,
+				39118ABC2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				39118A7F2B5009CF0031E2F1 /* Detail.storyboard in Resources */,
 				39118A832B5009F30031E2F1 /* DetailTableViewCell.xib in Resources */,
 				39118A872B500F080031E2F1 /* ADTableViewCell.xib in Resources */,
+				39118ABE2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib in Resources */,
 				39118A9D2B5126250031E2F1 /* Chat.storyboard in Resources */,
 				39118AB32B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib in Resources */,
 				393C609E2B49934A00F97898 /* Main.storyboard in Resources */,
@@ -360,6 +367,7 @@
 				39118A342B4EB8700031E2F1 /* MagazineExtension.swift in Sources */,
 				391F31EC2B4D39C7006DA19B /* CityInfo.swift in Sources */,
 				39118AA32B5128DB0031E2F1 /* ChatViewController.swift in Sources */,
+				39118ABD2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift in Sources */,
 				393C60992B49934A00F97898 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

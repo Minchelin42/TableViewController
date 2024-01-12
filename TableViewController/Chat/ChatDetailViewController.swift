@@ -48,6 +48,8 @@ class ChatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let xib2 = UINib(nibName: "ChatDetailUserTableViewCell", bundle: nil)
         chatDetailTableView.register(xib2, forCellReuseIdentifier: "ChatDetailUserTableViewCell")
+        
+        chatDetailTableView.allowsSelection = false
 
     }
     
@@ -63,8 +65,6 @@ class ChatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         myformatter.pmSymbol = "오후"
         
         let result = myformatter.string(from:convertDate!)
-        
-        print(result)
         
         return result
     }

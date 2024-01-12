@@ -16,8 +16,7 @@ class ChatTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super .awakeFromNib()
-        
-        userImage.image = UIImage(systemName: "heart")
+
         userImage.setImageCircle()
         
         userNameLabel.font = .boldSystemFont(ofSize: 15)

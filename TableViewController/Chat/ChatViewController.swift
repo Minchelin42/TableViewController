@@ -29,6 +29,9 @@ class ChatViewController: UIViewController {
         let xib = UINib(nibName: "ChatTableViewCell", bundle: nil)
         chatTableView.register(xib, forCellReuseIdentifier: "ChatTableViewCell")
         
+        let xib2 = UINib(nibName: "ChatDetailGroupTableViewCell", bundle: nil)
+        chatTableView.register(xib2, forCellReuseIdentifier: "ChatDetailGroupTableViewCell")
+        
     }
 
 }
@@ -43,9 +46,7 @@ func changeDateStyle(date: String) -> String {
     myformatter.dateFormat = "yy.MM.dd"
 
     let result = myformatter.string(from:convertDate!)
-    
-    print(result)
-    
+
     return result
 }
 
@@ -55,21 +56,41 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
         
         let chat = mockChatList[indexPath.row]
         
-        cell.userImage.image = UIImage(named: chat.chatroomImage[0])
-        cell.userNameLabel.text = chat.chatroomName
-        cell.userChatLabel.text = chat.chatList.last?.message
-        
-        let lastDate = chat.chatList.last?.date
-        
-        cell.dateLabel.text = changeDateStyle(date: lastDate ?? "")
-        
-        cell.selectionStyle = .none
-        
-        return cell
+        if chat.chatroomImage.count == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
+            
+            cell.userImage.image = UIImage(named: chat.chatroomImage[0])
+            cell.userNameLabel.text = chat.chatroomName
+            cell.userChatLabel.text = chat.chatList.last?.message
+            
+            let lastDate = chat.chatList.last?.date
+            
+            cell.dateLabel.text = changeDateStyle(date: lastDate ?? "")
+            
+            cell.selectionStyle = .none
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatDetailGroupTableViewCell", for: indexPath) as! ChatDetailGroupTableViewCell
+            
+            for index in 0...3 {
+                cell.chatUserImages[index].image = UIImage(named: chat.chatroomImage[index])
+                cell.chatUserImages[index].layer.cornerRadius = 3
+            }
+            cell.chatNameLabel.text = chat.chatroomName
+            cell.chatLabel.text = chat.chatList.last?.message
+            
+            let lastDate = chat.chatList.last?.date
+            
+            cell.dateLabel.text = changeDateStyle(date: lastDate ?? "")
+            
+            cell.selectionStyle = .none
+            
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
