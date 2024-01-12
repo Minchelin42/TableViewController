@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIImageView {
-    func setCityImage() {
+    func setImageCircle() {
         self.contentMode = .scaleAspectFill
         DispatchQueue.main.async {
             self.layer.cornerRadius = self.frame.width / 2
@@ -28,5 +28,15 @@ extension UILabel {
         self.textColor = .lightGray
         self.textAlignment = .center
         self.numberOfLines = 0
+    }
+}
+
+extension Int {
+    var prettyNumber: String {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = ","
+        formatter.numberStyle = .decimal
+        formatter.locale = .init(identifier: "ko")
+        return formatter.string(from: NSNumber(value: self)) ?? ""
     }
 }

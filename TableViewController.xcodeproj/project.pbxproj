@@ -21,12 +21,23 @@
 		39118A8D2B502AB90031E2F1 /* TravelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A8C2B502AB90031E2F1 /* TravelDetailViewController.swift */; };
 		39118A8F2B502BE80031E2F1 /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A8E2B502BE80031E2F1 /* ADViewController.swift */; };
 		39118A912B50B5F60031E2F1 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A902B50B5F60031E2F1 /* ViewProtocol.swift */; };
+		39118A942B5110460031E2F1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 39118A932B5110460031E2F1 /* Kingfisher */; };
+		39118A9D2B5126250031E2F1 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39118A9C2B5126250031E2F1 /* Chat.storyboard */; };
+		39118AA02B5128560031E2F1 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A9E2B5128560031E2F1 /* ChatTableViewCell.swift */; };
+		39118AA12B5128560031E2F1 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39118A9F2B5128560031E2F1 /* ChatTableViewCell.xib */; };
+		39118AA32B5128DB0031E2F1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118AA22B5128DB0031E2F1 /* ChatViewController.swift */; };
+		39118AA52B512E5C0031E2F1 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118AA42B512E5C0031E2F1 /* ChattingData.swift */; };
+		39118AA72B51362C0031E2F1 /* ChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118AA62B51362C0031E2F1 /* ChatDetailViewController.swift */; };
+		39118AB22B5139580031E2F1 /* ChatDetailFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118AB02B5139580031E2F1 /* ChatDetailFriendTableViewCell.swift */; };
+		39118AB32B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39118AB12B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib */; };
+		39118AB62B514D430031E2F1 /* ChatDetailUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118AB42B514D430031E2F1 /* ChatDetailUserTableViewCell.swift */; };
+		39118AB72B514D430031E2F1 /* ChatDetailUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39118AB52B514D430031E2F1 /* ChatDetailUserTableViewCell.xib */; };
+		39118ABA2B515DA10031E2F1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 39118AB92B515DA10031E2F1 /* IQKeyboardManagerSwift */; };
 		391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */; };
 		391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */; };
 		391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */; };
 		391F31D22B4BF038006DA19B /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31D12B4BF038006DA19B /* MagazineTableViewController.swift */; };
 		391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31D32B4BF075006DA19B /* MagazineTableViewCell.swift */; };
-		391F31D72B4BF541006DA19B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 391F31D62B4BF541006DA19B /* Kingfisher */; };
 		391F31E82B4D30D7006DA19B /* TravelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31E72B4D30D7006DA19B /* TravelCollectionViewController.swift */; };
 		391F31EA2B4D3105006DA19B /* TravelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31E92B4D3105006DA19B /* TravelCollectionViewCell.swift */; };
 		391F31EC2B4D39C7006DA19B /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31EB2B4D39C7006DA19B /* CityInfo.swift */; };
@@ -59,6 +70,16 @@
 		39118A8C2B502AB90031E2F1 /* TravelDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailViewController.swift; sourceTree = "<group>"; };
 		39118A8E2B502BE80031E2F1 /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		39118A902B50B5F60031E2F1 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
+		39118A9C2B5126250031E2F1 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		39118A9E2B5128560031E2F1 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		39118A9F2B5128560031E2F1 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		39118AA22B5128DB0031E2F1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		39118AA42B512E5C0031E2F1 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChattingData.swift; path = ../../../../../Downloads/ChattingData.swift; sourceTree = "<group>"; };
+		39118AA62B51362C0031E2F1 /* ChatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewController.swift; sourceTree = "<group>"; };
+		39118AB02B5139580031E2F1 /* ChatDetailFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailFriendTableViewCell.swift; sourceTree = "<group>"; };
+		39118AB12B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailFriendTableViewCell.xib; sourceTree = "<group>"; };
+		39118AB42B514D430031E2F1 /* ChatDetailUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailUserTableViewCell.swift; sourceTree = "<group>"; };
+		39118AB52B514D430031E2F1 /* ChatDetailUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailUserTableViewCell.xib; sourceTree = "<group>"; };
 		391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = ../../../../Downloads/MagazineInfo.swift; sourceTree = "<group>"; };
@@ -88,7 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				391F31D72B4BF541006DA19B /* Kingfisher in Frameworks */,
+				39118A942B5110460031E2F1 /* Kingfisher in Frameworks */,
+				39118ABA2B515DA10031E2F1 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +132,23 @@
 				39118A902B50B5F60031E2F1 /* ViewProtocol.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		39118A992B5126090031E2F1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				39118A9C2B5126250031E2F1 /* Chat.storyboard */,
+				39118A9E2B5128560031E2F1 /* ChatTableViewCell.swift */,
+				39118A9F2B5128560031E2F1 /* ChatTableViewCell.xib */,
+				39118AA42B512E5C0031E2F1 /* ChattingData.swift */,
+				39118AA22B5128DB0031E2F1 /* ChatViewController.swift */,
+				39118AA62B51362C0031E2F1 /* ChatDetailViewController.swift */,
+				39118AB02B5139580031E2F1 /* ChatDetailFriendTableViewCell.swift */,
+				39118AB12B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib */,
+				39118AB42B514D430031E2F1 /* ChatDetailUserTableViewCell.swift */,
+				39118AB52B514D430031E2F1 /* ChatDetailUserTableViewCell.xib */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		391F31ED2B4D4BAF006DA19B /* Todo */ = {
@@ -181,6 +220,7 @@
 		393C60952B49934A00F97898 /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				39118A992B5126090031E2F1 /* Chat */,
 				39118A7D2B5009B80031E2F1 /* Detail */,
 				391F31FF2B4D5B93006DA19B /* Travel3 */,
 				391F31F62B4D4C4F006DA19B /* Travel2 */,
@@ -218,7 +258,8 @@
 			);
 			name = TableViewController;
 			packageProductDependencies = (
-				391F31D62B4BF541006DA19B /* Kingfisher */,
+				39118A932B5110460031E2F1 /* Kingfisher */,
+				39118AB92B515DA10031E2F1 /* IQKeyboardManagerSwift */,
 			);
 			productName = TableViewController;
 			productReference = 393C60932B49934A00F97898 /* TableViewController.app */;
@@ -249,7 +290,8 @@
 			);
 			mainGroup = 393C608A2B49934A00F97898;
 			packageReferences = (
-				391F31D52B4BF541006DA19B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				39118A922B5110460031E2F1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				39118AB82B515DA10031E2F1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 393C60942B49934A00F97898 /* Products */;
 			projectDirPath = "";
@@ -266,11 +308,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				393C60A32B49934C00F97898 /* LaunchScreen.storyboard in Resources */,
+				39118AA12B5128560031E2F1 /* ChatTableViewCell.xib in Resources */,
+				39118AB72B514D430031E2F1 /* ChatDetailUserTableViewCell.xib in Resources */,
 				391F31FC2B4D4C85006DA19B /* Travel2CollectionViewCell.xib in Resources */,
 				393C60A02B49934C00F97898 /* Assets.xcassets in Resources */,
 				39118A7F2B5009CF0031E2F1 /* Detail.storyboard in Resources */,
 				39118A832B5009F30031E2F1 /* DetailTableViewCell.xib in Resources */,
 				39118A872B500F080031E2F1 /* ADTableViewCell.xib in Resources */,
+				39118A9D2B5126250031E2F1 /* Chat.storyboard in Resources */,
+				39118AB32B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib in Resources */,
 				393C609E2B49934A00F97898 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				393C60AB2B499D9600F97898 /* SettingTableViewController.swift in Sources */,
+				39118AB62B514D430031E2F1 /* ChatDetailUserTableViewCell.swift in Sources */,
 				391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */,
 				39118A892B5016090031E2F1 /* DetailViewController.swift in Sources */,
 				39118A8B2B501CD50031E2F1 /* TravelModel.swift in Sources */,
@@ -294,12 +341,16 @@
 				39118A362B4EB8A50031E2F1 /* TravelProtocol.swift in Sources */,
 				391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */,
 				391F31D22B4BF038006DA19B /* MagazineTableViewController.swift in Sources */,
+				39118AB22B5139580031E2F1 /* ChatDetailFriendTableViewCell.swift in Sources */,
 				391F32012B4D5C90006DA19B /* Travel3ViewController.swift in Sources */,
+				39118AA52B512E5C0031E2F1 /* ChattingData.swift in Sources */,
+				39118AA02B5128560031E2F1 /* ChatTableViewCell.swift in Sources */,
 				39118A8D2B502AB90031E2F1 /* TravelDetailViewController.swift in Sources */,
 				39118A822B5009F30031E2F1 /* DetailTableViewCell.swift in Sources */,
 				391F31F42B4D4C15006DA19B /* MagazineInfo.swift in Sources */,
 				39118A322B4EB85F0031E2F1 /* MagazineProtocol.swift in Sources */,
 				391F31FE2B4D4C94006DA19B /* Travel2CollectionViewController.swift in Sources */,
+				39118AA72B51362C0031E2F1 /* ChatDetailViewController.swift in Sources */,
 				39118A8F2B502BE80031E2F1 /* ADViewController.swift in Sources */,
 				391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */,
 				393C60972B49934A00F97898 /* AppDelegate.swift in Sources */,
@@ -308,6 +359,7 @@
 				391F31E82B4D30D7006DA19B /* TravelCollectionViewController.swift in Sources */,
 				39118A342B4EB8700031E2F1 /* MagazineExtension.swift in Sources */,
 				391F31EC2B4D39C7006DA19B /* CityInfo.swift in Sources */,
+				39118AA32B5128DB0031E2F1 /* ChatViewController.swift in Sources */,
 				393C60992B49934A00F97898 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +516,7 @@
 				INFOPLIST_FILE = TableViewController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Chat;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,7 +543,7 @@
 				INFOPLIST_FILE = TableViewController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Chat;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,21 +583,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		391F31D52B4BF541006DA19B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		39118A922B5110460031E2F1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.10.1;
+				minimumVersion = 7.10.2;
+			};
+		};
+		39118AB82B515DA10031E2F1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		391F31D62B4BF541006DA19B /* Kingfisher */ = {
+		39118A932B5110460031E2F1 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 391F31D52B4BF541006DA19B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 39118A922B5110460031E2F1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		39118AB92B515DA10031E2F1 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39118AB82B515DA10031E2F1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

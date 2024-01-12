@@ -17,7 +17,7 @@ class Travel2CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        cityImage.setCityImage()
+        cityImage.setImageCircle()
         cityLabel.setCityLabel()
         cityListLabel.setCityListLabel()
 

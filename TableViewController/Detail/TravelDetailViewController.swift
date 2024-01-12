@@ -23,7 +23,7 @@ class TravelDetailViewController: UIViewController, ViewProtocol {
     func configureView() {
         navigationItem.title = "관광지 화면"
         
-        let image = UIImage(systemName: "xmark")
+        let image = UIImage(systemName: "chevron.left")
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(detailLeftBarButtonItemClicked))
         button.tintColor = .black
         navigationItem.leftBarButtonItem = button

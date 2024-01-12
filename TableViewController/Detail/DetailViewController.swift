@@ -97,8 +97,9 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.starImage[index].tintColor = UIColor(named: "starYellow")
             }
-
-            cell.gradeLabel.text = "(\(travel.grade!)) ∙ 저장(\(travel.save!))"
+            
+            // 저장 옵셔널 해제하기
+            cell.gradeLabel.text = "(\(travel.grade!)) ∙ 저장(\(travel.save?.prettyNumber))"
             
             return cell
         }
