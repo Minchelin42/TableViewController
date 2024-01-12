@@ -20,6 +20,7 @@
 		39118A8B2B501CD50031E2F1 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A8A2B501CD40031E2F1 /* TravelModel.swift */; };
 		39118A8D2B502AB90031E2F1 /* TravelDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A8C2B502AB90031E2F1 /* TravelDetailViewController.swift */; };
 		39118A8F2B502BE80031E2F1 /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A8E2B502BE80031E2F1 /* ADViewController.swift */; };
+		39118A912B50B5F60031E2F1 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A902B50B5F60031E2F1 /* ViewProtocol.swift */; };
 		391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */; };
 		391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */; };
 		391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */; };
@@ -57,6 +58,7 @@
 		39118A8A2B501CD40031E2F1 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TravelModel.swift; path = ../../../../../Downloads/TravelModel.swift; sourceTree = "<group>"; };
 		39118A8C2B502AB90031E2F1 /* TravelDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailViewController.swift; sourceTree = "<group>"; };
 		39118A8E2B502BE80031E2F1 /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		39118A902B50B5F60031E2F1 /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = ../../../../Downloads/MagazineInfo.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				39118A8A2B501CD40031E2F1 /* TravelModel.swift */,
 				39118A8C2B502AB90031E2F1 /* TravelDetailViewController.swift */,
 				39118A8E2B502BE80031E2F1 /* ADViewController.swift */,
+				39118A902B50B5F60031E2F1 /* ViewProtocol.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				393C609B2B49934A00F97898 /* ViewController.swift in Sources */,
 				39118A382B4EB8AF0031E2F1 /* TravelExtension.swift in Sources */,
 				39118A862B500F080031E2F1 /* ADTableViewCell.swift in Sources */,
+				39118A912B50B5F60031E2F1 /* ViewProtocol.swift in Sources */,
 				391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */,
 				39118A362B4EB8A50031E2F1 /* TravelProtocol.swift in Sources */,
 				391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */,

@@ -7,14 +7,26 @@
 
 import UIKit
 
-class TravelDetailViewController: UIViewController {
+class TravelDetailViewController: UIViewController, ViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
+    }
+    
+    @objc func detailLeftBarButtonItemClicked() {
+        print(#function)
 
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func configureView() {
         navigationItem.title = "관광지 화면"
         
-        view.backgroundColor = .blue
+        let image = UIImage(systemName: "xmark")
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(detailLeftBarButtonItemClicked))
+        button.tintColor = .black
+        navigationItem.leftBarButtonItem = button
     }
 
 

@@ -8,26 +8,35 @@
 import UIKit
 import Kingfisher
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, ViewProtocol {
 
     let travel = TravelInfo().travel
+    
     @IBOutlet var detailTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTableView()
+        configureView()
+    }
+    
+    func configureView() {
         navigationItem.title = "도시 상세 정보"
-        
+    }
+}
+
+extension DetailViewController {
+    func configureTableView() {
         detailTableView.delegate = self
         detailTableView.dataSource = self
         
-        let xib = UINib(nibName: "DetailTableViewCell", bundle: nil)
-        detailTableView.register(xib, forCellReuseIdentifier: "DetailTableViewCell")
+        let xib = UINib(nibName: DetailTableViewCell.identifier, bundle: nil)
+        detailTableView.register(xib, forCellReuseIdentifier: DetailTableViewCell.identifier)
         
-        let xib2 = UINib(nibName: "ADTableViewCell", bundle: nil)
-        detailTableView.register(xib2, forCellReuseIdentifier: "ADTableViewCell")
+        let xib2 = UINib(nibName: ADTableViewCell.identifier, bundle: nil)
+        detailTableView.register(xib2, forCellReuseIdentifier: ADTableViewCell.identifier)
     }
-
 }
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
@@ -49,43 +58,23 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         let travel = travel[indexPath.row]
         
         if travel.ad { 
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ADTableViewCell", for: indexPath) as! ADTableViewCell
-            
-            cell.adView.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
-            cell.adView.layer.cornerRadius = 10
-            
-            cell.adLabel.text = "AD"
-            cell.adLabel.font = .boldSystemFont(ofSize: 15)
-            cell.adLabel.textAlignment = .center
-            cell.adLabel.backgroundColor = .white
-            cell.adLabel.clipsToBounds = true
-            cell.adLabel.layer.cornerRadius = 10
+            let cell = tableView.dequeueReusableCell(withIdentifier: ADTableViewCell.identifier, for: indexPath) as! ADTableViewCell
             
             cell.adDetailLabel.text = travel.title
-            cell.adDetailLabel.font = .boldSystemFont(ofSize: 16)
-            cell.adDetailLabel.numberOfLines = 0
-            cell.adDetailLabel.textAlignment = .center
+            
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailTableViewCell", for: indexPath) as! DetailTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: DetailTableViewCell.identifier, for: indexPath) as! DetailTableViewCell
             
-            let url = URL(string: travel.travel_image ?? "")
+            let url = URL(string: travel.travel_image!)
             cell.travelImage.kf.setImage(with: url)
-            cell.travelImage.contentMode = .scaleAspectFill
-            cell.travelImage.layer.cornerRadius = 10
             
             cell.titleLabel.text = travel.title
-            cell.titleLabel.font = .boldSystemFont(ofSize: 15)
-            cell.descriptionLabel.text = travel.description
-            cell.descriptionLabel.font = .systemFont(ofSize: 13, weight: .semibold)
-            cell.descriptionLabel.textColor = .gray
-            cell.descriptionLabel.numberOfLines = 0
-            cell.gradeLabel.text = "별점\(travel.grade ?? 0.0)   저장(\(travel.save ?? 0))"
-            cell.gradeLabel.font = .systemFont(ofSize: 13, weight: .regular)
-            cell.gradeLabel.textColor = .lightGray
             
-            cell.heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
-            cell.heartButton.tintColor = .white
+            cell.descriptionLabel.text = travel.description
+
+            cell.gradeLabel.text = "별점\(travel.grade!)   저장(\(travel.save!))"
+            
             return cell
         }
     }
