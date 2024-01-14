@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChatDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class ChatDetailViewController: UIViewController, ViewProtocol {
 
     @IBOutlet var chatDetailTableView: UITableView!
     
@@ -20,20 +20,13 @@ class ChatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "\(mockChatList[chatId].chatroomName)"
-        
-        let image = UIImage(systemName: "chevron.left")
-        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(detailLeftBarButtonItemClicked))
-        button.tintColor = .black
-        navigationItem.leftBarButtonItem = button
-        
-        chatDetailTableView.delegate = self
-        chatDetailTableView.dataSource = self
-        chatDetailTableView.separatorStyle = .none
-        
-        chatDetailTableView.rowHeight = UITableView.automaticDimension
-        
+
+        configureTableView()
+        configureView()
+
+    }
+    
+    func configureView() {
         chatInputView.backgroundColor = UIColor(named: "buttonGray")
         chatInputView.layer.cornerRadius = 15
         inputTextField.borderStyle = .none
@@ -43,30 +36,13 @@ class ChatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
         sendButton.tintColor = .lightGray
         
-        let xib = UINib(nibName: "ChatDetailFriendTableViewCell", bundle: nil)
-        chatDetailTableView.register(xib, forCellReuseIdentifier: "ChatDetailFriendTableViewCell")
         
-        let xib2 = UINib(nibName: "ChatDetailUserTableViewCell", bundle: nil)
-        chatDetailTableView.register(xib2, forCellReuseIdentifier: "ChatDetailUserTableViewCell")
+        navigationItem.title = "\(mockChatList[chatId].chatroomName)"
         
-        chatDetailTableView.allowsSelection = false
-
-    }
-    
-    func changeDateStyle(date: String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        
-        let convertDate = dateFormatter.date(from: date)
-        
-        let myformatter = DateFormatter()
-        myformatter.dateFormat = "hh:mm a"
-        myformatter.amSymbol = "오전"
-        myformatter.pmSymbol = "오후"
-        
-        let result = myformatter.string(from:convertDate!)
-        
-        return result
+        let image = UIImage(systemName: "chevron.left")
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(detailLeftBarButtonItemClicked))
+        button.tintColor = .black
+        navigationItem.leftBarButtonItem = button
     }
     
     @objc func detailLeftBarButtonItemClicked() {
@@ -74,8 +50,10 @@ class ChatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
 
         navigationController?.popViewController(animated: true)
     }
-    
-    
+
+}
+
+extension ChatDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mockChatList[chatId].chatList.count
     }
@@ -90,7 +68,7 @@ class ChatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             cell.friendImage.image = UIImage(named: chat.user.profileImage)
             cell.friendName.text = chat.user.rawValue
             cell.friendChat.text = chat.message
-            cell.dateLabel.text = changeDateStyle(date: chat.date)
+            cell.dateLabel.text = chat.date.changeDateStyleChatRoom()
         
             return cell
             
@@ -98,11 +76,33 @@ class ChatDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatDetailUserTableViewCell", for: indexPath) as! ChatDetailUserTableViewCell
             
             cell.userChatLabel.text = chat.message
-            cell.dateLabel.text = changeDateStyle(date: chat.date)
+            cell.dateLabel.text = chat.date.changeDateStyleChatRoom()
             
             return cell
         }
     
+    }
+}
+
+extension ChatDetailViewController {
+    
+    func configureTableView() {
+        
+        navigationItem.title = "\(mockChatList[chatId].chatroomName)"
+        
+        chatDetailTableView.delegate = self
+        chatDetailTableView.dataSource = self
+        chatDetailTableView.separatorStyle = .none
+        
+        chatDetailTableView.rowHeight = UITableView.automaticDimension
+        
+        let xib = UINib(nibName: "ChatDetailFriendTableViewCell", bundle: nil)
+        chatDetailTableView.register(xib, forCellReuseIdentifier: "ChatDetailFriendTableViewCell")
+        
+        let xib2 = UINib(nibName: "ChatDetailUserTableViewCell", bundle: nil)
+        chatDetailTableView.register(xib2, forCellReuseIdentifier: "ChatDetailUserTableViewCell")
+        
+        chatDetailTableView.allowsSelection = false
     }
 
 }

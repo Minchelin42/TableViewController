@@ -55,6 +55,7 @@
 		393C60A02B49934C00F97898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 393C609F2B49934C00F97898 /* Assets.xcassets */; };
 		393C60A32B49934C00F97898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393C60A12B49934C00F97898 /* LaunchScreen.storyboard */; };
 		393C60AB2B499D9600F97898 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C60AA2B499D9600F97898 /* SettingTableViewController.swift */; };
+		395E8CA82B542CBB00AA69F9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CA72B542CBB00AA69F9 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		393C60A22B49934C00F97898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		393C60A42B49934C00F97898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		393C60AA2B499D9600F97898 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		395E8CA72B542CBB00AA69F9 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +146,6 @@
 				39118A9C2B5126250031E2F1 /* Chat.storyboard */,
 				39118A9E2B5128560031E2F1 /* ChatTableViewCell.swift */,
 				39118A9F2B5128560031E2F1 /* ChatTableViewCell.xib */,
-				39118AA42B512E5C0031E2F1 /* ChattingData.swift */,
 				39118AA22B5128DB0031E2F1 /* ChatViewController.swift */,
 				39118AA62B51362C0031E2F1 /* ChatDetailViewController.swift */,
 				39118AB02B5139580031E2F1 /* ChatDetailFriendTableViewCell.swift */,
@@ -153,6 +154,8 @@
 				39118AB52B514D430031E2F1 /* ChatDetailUserTableViewCell.xib */,
 				39118ABB2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift */,
 				39118ABC2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib */,
+				39118AA42B512E5C0031E2F1 /* ChattingData.swift */,
+				395E8CA72B542CBB00AA69F9 /* StringExtension.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				391F31F42B4D4C15006DA19B /* MagazineInfo.swift in Sources */,
 				39118A322B4EB85F0031E2F1 /* MagazineProtocol.swift in Sources */,
 				391F31FE2B4D4C94006DA19B /* Travel2CollectionViewController.swift in Sources */,
+				395E8CA82B542CBB00AA69F9 /* StringExtension.swift in Sources */,
 				39118AA72B51362C0031E2F1 /* ChatDetailViewController.swift in Sources */,
 				39118A8F2B502BE80031E2F1 /* ADViewController.swift in Sources */,
 				391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */,

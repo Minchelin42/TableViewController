@@ -24,14 +24,13 @@ class ChatDetailFriendTableViewCell: UITableViewCell {
         friendName.font = .boldSystemFont(ofSize: 14)
         friendChat.font = .systemFont(ofSize: 14, weight: .regular)
         friendChat.numberOfLines = 0
+        
         dateLabel.font = .systemFont(ofSize: 12, weight: .medium)
         dateLabel.textColor = .lightGray
         
         chatView.layer.borderWidth = 1
         chatView.layer.borderColor = UIColor.gray.cgColor
-        chatView.layer.cornerRadius = chatView.frame.width * 0.2
-        
-        
+        chatView.layer.cornerRadius = chatView.frame.width * 0.2   
         
     }
     

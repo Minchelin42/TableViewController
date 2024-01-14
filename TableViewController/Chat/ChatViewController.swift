@@ -7,20 +7,28 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
-    
+class ChatViewController: UIViewController, ViewProtocol {
 
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var chatTableView: UITableView!
     
-    let searchController = UISearchController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureView()
+        configureTableView()
+    }
+    
+    func configureView() {
         navigationItem.title = "TRAVEL TALK"
-        
-        searchBar.placeholder = "친구 이름을 검색해보세요"        
+        searchBar.placeholder = "친구 이름을 검색해보세요"
+    }
+
+
+}
+
+extension ChatViewController {
+    func configureTableView() {
         chatTableView.separatorStyle = .none
 
         chatTableView.delegate = self
@@ -31,23 +39,7 @@ class ChatViewController: UIViewController {
         
         let xib2 = UINib(nibName: "ChatDetailGroupTableViewCell", bundle: nil)
         chatTableView.register(xib2, forCellReuseIdentifier: "ChatDetailGroupTableViewCell")
-        
     }
-
-}
-
-func changeDateStyle(date: String) -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-    
-    let convertDate = dateFormatter.date(from: date)
-    
-    let myformatter = DateFormatter()
-    myformatter.dateFormat = "yy.MM.dd"
-
-    let result = myformatter.string(from:convertDate!)
-
-    return result
 }
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
@@ -68,7 +60,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             
             let lastDate = chat.chatList.last?.date
             
-            cell.dateLabel.text = changeDateStyle(date: lastDate ?? "")
+            cell.dateLabel.text = lastDate?.changeDateStyleChatList()
             
             cell.selectionStyle = .none
             
@@ -83,9 +75,9 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             cell.chatNameLabel.text = chat.chatroomName
             cell.chatLabel.text = chat.chatList.last?.message
             
-            let lastDate = chat.chatList.last?.date
+            let lastDate = (chat.chatList.last?.date)!
             
-            cell.dateLabel.text = changeDateStyle(date: lastDate ?? "")
+            cell.dateLabel.text = lastDate.changeDateStyleChatList()
             
             cell.selectionStyle = .none
             
@@ -107,6 +99,4 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.reloadRows(at: [indexPath], with: .fade)
         
     }
-    
-    
 }

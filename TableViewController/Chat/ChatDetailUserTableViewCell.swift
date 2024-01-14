@@ -18,6 +18,7 @@ class ChatDetailUserTableViewCell: UITableViewCell {
 
         userChatLabel.font = .systemFont(ofSize: 14, weight: .regular)
         userChatLabel.numberOfLines = 0
+        
         dateLabel.font = .systemFont(ofSize: 12, weight: .medium)
         dateLabel.textColor = .gray
         
@@ -26,7 +27,6 @@ class ChatDetailUserTableViewCell: UITableViewCell {
         chatView.layer.cornerRadius = chatView.frame.width * 0.2
         chatView.backgroundColor = UIColor(named: "buttonGray")
         
-   
     }
 
 }
