@@ -9,8 +9,6 @@ import UIKit
 
 class DetailTableViewCell: UITableViewCell {
     
-    static let identifier = "DetailTableViewCell"
-    
     @IBOutlet var heartButton: UIButton!
     @IBOutlet var travelImage: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!

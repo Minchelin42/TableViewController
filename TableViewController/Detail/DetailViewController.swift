@@ -75,7 +75,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             
             let starGrade = travel.grade!
             
-            var fillIndex = Int(starGrade)
+            let fillIndex = Int(starGrade)
             var halfIndex = 0
             
             if starGrade - Double(Int(starGrade)) >= 0.5 { // 소수점 .5 이상일 때
@@ -99,7 +99,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             // 저장 옵셔널 해제하기
-            cell.gradeLabel.text = "(\(travel.grade!)) ∙ 저장(\(travel.save?.prettyNumber))"
+            cell.gradeLabel.text = "(\(travel.grade!)) ∙ 저장(\(travel.save?.prettyNumber ?? ""))"
             
             return cell
         }

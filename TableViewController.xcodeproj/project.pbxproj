@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39118A322B4EB85F0031E2F1 /* MagazineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A312B4EB85E0031E2F1 /* MagazineProtocol.swift */; };
 		39118A342B4EB8700031E2F1 /* MagazineExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A332B4EB8700031E2F1 /* MagazineExtension.swift */; };
 		39118A362B4EB8A50031E2F1 /* TravelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A352B4EB8A50031E2F1 /* TravelProtocol.swift */; };
 		39118A382B4EB8AF0031E2F1 /* TravelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118A372B4EB8AF0031E2F1 /* TravelExtension.swift */; };
@@ -56,10 +55,12 @@
 		393C60A32B49934C00F97898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 393C60A12B49934C00F97898 /* LaunchScreen.storyboard */; };
 		393C60AB2B499D9600F97898 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C60AA2B499D9600F97898 /* SettingTableViewController.swift */; };
 		395E8CA82B542CBB00AA69F9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CA72B542CBB00AA69F9 /* StringExtension.swift */; };
+		395E8CBD2B54F04D00AA69F9 /* MagazineWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CBC2B54F04D00AA69F9 /* MagazineWebViewController.swift */; };
+		395E8CBF2B55029000AA69F9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CBE2B55029000AA69F9 /* Protocol.swift */; };
+		395E8CC12B550A2000AA69F9 /* TravelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC02B550A2000AA69F9 /* TravelEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		39118A312B4EB85E0031E2F1 /* MagazineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineProtocol.swift; sourceTree = "<group>"; };
 		39118A332B4EB8700031E2F1 /* MagazineExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineExtension.swift; sourceTree = "<group>"; };
 		39118A352B4EB8A50031E2F1 /* TravelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelProtocol.swift; sourceTree = "<group>"; };
 		39118A372B4EB8AF0031E2F1 /* TravelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelExtension.swift; sourceTree = "<group>"; };
@@ -108,6 +109,9 @@
 		393C60A42B49934C00F97898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		393C60AA2B499D9600F97898 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		395E8CA72B542CBB00AA69F9 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		395E8CBC2B54F04D00AA69F9 /* MagazineWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineWebViewController.swift; sourceTree = "<group>"; };
+		395E8CBE2B55029000AA69F9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		395E8CC02B550A2000AA69F9 /* TravelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +179,8 @@
 				391F31D12B4BF038006DA19B /* MagazineTableViewController.swift */,
 				391F31D32B4BF075006DA19B /* MagazineTableViewCell.swift */,
 				391F31F32B4D4C15006DA19B /* MagazineInfo.swift */,
-				39118A312B4EB85E0031E2F1 /* MagazineProtocol.swift */,
 				39118A332B4EB8700031E2F1 /* MagazineExtension.swift */,
+				395E8CBC2B54F04D00AA69F9 /* MagazineWebViewController.swift */,
 			);
 			path = Magazine;
 			sourceTree = "<group>";
@@ -206,6 +210,7 @@
 				391F32002B4D5C90006DA19B /* Travel3ViewController.swift */,
 				39118A352B4EB8A50031E2F1 /* TravelProtocol.swift */,
 				39118A372B4EB8AF0031E2F1 /* TravelExtension.swift */,
+				395E8CC02B550A2000AA69F9 /* TravelEnum.swift */,
 			);
 			path = Travel3;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				393C60AA2B499D9600F97898 /* SettingTableViewController.swift */,
 				391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */,
 				391F31EB2B4D39C7006DA19B /* CityInfo.swift */,
+				395E8CBE2B55029000AA69F9 /* Protocol.swift */,
 			);
 			path = TableViewController;
 			sourceTree = "<group>";
@@ -344,21 +350,23 @@
 				39118A892B5016090031E2F1 /* DetailViewController.swift in Sources */,
 				39118A8B2B501CD50031E2F1 /* TravelModel.swift in Sources */,
 				393C609B2B49934A00F97898 /* ViewController.swift in Sources */,
+				395E8CC12B550A2000AA69F9 /* TravelEnum.swift in Sources */,
 				39118A382B4EB8AF0031E2F1 /* TravelExtension.swift in Sources */,
 				39118A862B500F080031E2F1 /* ADTableViewCell.swift in Sources */,
 				39118A912B50B5F60031E2F1 /* ViewProtocol.swift in Sources */,
 				391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */,
 				39118A362B4EB8A50031E2F1 /* TravelProtocol.swift in Sources */,
+				395E8CBD2B54F04D00AA69F9 /* MagazineWebViewController.swift in Sources */,
 				391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */,
 				391F31D22B4BF038006DA19B /* MagazineTableViewController.swift in Sources */,
 				39118AB22B5139580031E2F1 /* ChatDetailFriendTableViewCell.swift in Sources */,
 				391F32012B4D5C90006DA19B /* Travel3ViewController.swift in Sources */,
+				395E8CBF2B55029000AA69F9 /* Protocol.swift in Sources */,
 				39118AA52B512E5C0031E2F1 /* ChattingData.swift in Sources */,
 				39118AA02B5128560031E2F1 /* ChatTableViewCell.swift in Sources */,
 				39118A8D2B502AB90031E2F1 /* TravelDetailViewController.swift in Sources */,
 				39118A822B5009F30031E2F1 /* DetailTableViewCell.swift in Sources */,
 				391F31F42B4D4C15006DA19B /* MagazineInfo.swift in Sources */,
-				39118A322B4EB85F0031E2F1 /* MagazineProtocol.swift in Sources */,
 				391F31FE2B4D4C94006DA19B /* Travel2CollectionViewController.swift in Sources */,
 				395E8CA82B542CBB00AA69F9 /* StringExtension.swift in Sources */,
 				39118AA72B51362C0031E2F1 /* ChatDetailViewController.swift in Sources */,
@@ -528,7 +536,6 @@
 				INFOPLIST_FILE = TableViewController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Chat;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -555,7 +562,6 @@
 				INFOPLIST_FILE = TableViewController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Chat;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

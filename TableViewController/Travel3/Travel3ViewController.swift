@@ -7,10 +7,42 @@
 
 import UIKit
 
-class Travel3ViewController: UIViewController, TravelProtocol {
-    
+class Travel3ViewController: UIViewController {
+
     var navigationTitleString: String = "인기 도시"
-    var cellName: String = "Travel2CollectionViewCell"
+    
+    var city: [City] = CityInfo().city {
+        didSet {
+            cityCollectionView.reloadData()
+        }
+    }
+    
+    @IBOutlet var cityCollectionView: UICollectionView!
+    @IBOutlet var selectSegment: UISegmentedControl!
+    @IBOutlet var grayLine: UIView!
+    @IBOutlet var citySearchBar: UISearchBar!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureView()
+        configureCollectionView()
+    }
+
+    @IBAction func selectSegmentTapped(_ sender: UISegmentedControl) {
+        segmentAction()
+    }
+    
+}
+
+extension Travel3ViewController {
+    func configureCollectionView() {
+        let xib = UINib(nibName: Travel2CollectionViewCell.identifier, bundle: nil)
+        cityCollectionView.register(xib, forCellWithReuseIdentifier: Travel2CollectionViewCell.identifier)
+        
+        cityCollectionView.dataSource = self
+        cityCollectionView.delegate = self
+    }
     
     func setLayout() {
         let layout = UICollectionViewFlowLayout()
@@ -27,23 +59,7 @@ class Travel3ViewController: UIViewController, TravelProtocol {
         
         cityCollectionView.collectionViewLayout = layout
     }
-    
-    func koreaCitySet() {
-        for index in 0...city.count - 1 {
-            if city[index].domestic_travel {
-                koreaCity.append(city[index])
-            }
-        }
-    }
-    
-    func notKoreaCitySet() {
-        for index in 0...city.count - 1 {
-            if !city[index].domestic_travel {
-                notKoreaCity.append(city[index])
-            }
-        }
-    }
-    
+
     func setSegment() {
         selectSegment.setTitle("모두", forSegmentAt: 0)
         selectSegment.setTitle("국내", forSegmentAt: 1)
@@ -53,57 +69,111 @@ class Travel3ViewController: UIViewController, TravelProtocol {
     func segmentAction() {
         if selectSegment.selectedSegmentIndex == 0 {
             city.removeAll()
-            city = allCity
+            city = cityList.allCity
+            searchBar(citySearchBar, textDidChange: citySearchBar.text ?? "")
             cityCollectionView.reloadData()
         } else if selectSegment.selectedSegmentIndex == 1 {
             city.removeAll()
-            city = koreaCity
+            city = cityList.koreaCity
+            searchBar(citySearchBar, textDidChange: citySearchBar.text ?? "")
             cityCollectionView.reloadData()
         } else {
             city.removeAll()
-            city = notKoreaCity
+            city = cityList.notKoreaCity
+            searchBar(citySearchBar, textDidChange: citySearchBar.text ?? "")
             cityCollectionView.reloadData()
         }
     }
     
-    var city = CityInfo().city
+    func filterCity(selectIndex: Int, text: String){
+        
+        var filterData: [City] = []
+        
+        var compareCity: [City]  = []
+        
+        switch selectIndex {
+        case 0: compareCity = cityList.allCity
+        case 1: compareCity = cityList.koreaCity
+        case 2: compareCity = cityList.notKoreaCity
+        default: print("오류 발생")
+        }
+        
+        for item in compareCity {
+            if item.city_name.contains(text) || item.city_english_name.contains(text) || item.city_explain.contains(text) {
+                filterData.append(item)
+            }
+        }
+        
+        city = filterData
+    }
+    
+    func cityReset(selected: Int) {
+        switch selected {
+        case 0: city = cityList.allCity
+        case 1: city = cityList.koreaCity
+        case 2: city = cityList.notKoreaCity
+        default: print("오류 발생")
+        }
+    }
+}
 
-    let allCity = CityInfo().city
-    
-    var koreaCity: [City] = []
-    
-    var notKoreaCity: [City] = []
-
-    @IBOutlet var cityCollectionView: UICollectionView!
-    @IBOutlet var selectSegment: UISegmentedControl!
-    @IBOutlet var grayLine: UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+extension Travel3ViewController: ViewProtocol {
+    func configureView() {
         
         navigationItem.title = navigationTitleString
         grayLine.backgroundColor = UIColor(named: "buttonGray")
-
-        koreaCitySet()
-        notKoreaCitySet()
-        
-        setSegment()
-
-        let xib = UINib(nibName: cellName, bundle: nil)
-        cityCollectionView.register(xib, forCellWithReuseIdentifier: cellName)
-        
-        cityCollectionView.dataSource = self
-        cityCollectionView.delegate = self
         
         setLayout()
-    
+        setSegment()
+        
+        citySearchBar.delegate = self
+        citySearchBar.showsCancelButton = true
+    }
+}
+
+extension Travel3ViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(#function)
+        
+        let selected = selectSegment.selectedSegmentIndex
+        
+        if searchBar.text == "" {
+            cityReset(selected: selected)
+        } else {
+            filterCity(selectIndex: selected, text: searchBar.text!)
+        }
+
     }
 
-    @IBAction func selectSegmentTapped(_ sender: UISegmentedControl) {
-        segmentAction()
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        
+        let selected = selectSegment.selectedSegmentIndex
+        
+        if searchBar.text == "" {
+            cityReset(selected: selected)
+        } else {
+            filterCity(selectIndex: selected, text: searchBar.text!)
+        }
+        
+        view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        
+        citySearchBar.text = ""
+        
+        let selected = selectSegment.selectedSegmentIndex
+
+        cityReset(selected: selected)
+        
+        view.endEditing(true)
+
     }
     
 }
+
 
 extension Travel3ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -113,7 +183,7 @@ extension Travel3ViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellName, for: indexPath) as! Travel2CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Travel2CollectionViewCell.identifier, for: indexPath) as! Travel2CollectionViewCell
         
         let city = city[indexPath.item]
     
@@ -130,10 +200,8 @@ extension Travel3ViewController: UICollectionViewDelegate, UICollectionViewDataS
 
         let sb = UIStoryboard(name: "Detail", bundle: nil)
         
-        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as! DetailViewController
 
         navigationController?.pushViewController(vc, animated: true)
-
-
     }
 }

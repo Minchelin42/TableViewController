@@ -29,6 +29,7 @@ class ChatDetailViewController: UIViewController, ViewProtocol {
     func configureView() {
         chatInputView.backgroundColor = UIColor(named: "buttonGray")
         chatInputView.layer.cornerRadius = 15
+        
         inputTextField.borderStyle = .none
         inputTextField.placeholder = "메시지를 입력하세요"
         inputTextField.backgroundColor = .clear
