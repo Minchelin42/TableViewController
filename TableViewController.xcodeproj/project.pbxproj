@@ -58,6 +58,9 @@
 		395E8CBD2B54F04D00AA69F9 /* MagazineWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CBC2B54F04D00AA69F9 /* MagazineWebViewController.swift */; };
 		395E8CBF2B55029000AA69F9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CBE2B55029000AA69F9 /* Protocol.swift */; };
 		395E8CC12B550A2000AA69F9 /* TravelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC02B550A2000AA69F9 /* TravelEnum.swift */; };
+		395E8CC42B55536C00AA69F9 /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */; };
+		395E8CC62B55537600AA69F9 /* Theater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395E8CC52B55537600AA69F9 /* Theater.storyboard */; };
+		395E8CC82B55566100AA69F9 /* TheaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC72B55566100AA69F9 /* TheaterData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +115,9 @@
 		395E8CBC2B54F04D00AA69F9 /* MagazineWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineWebViewController.swift; sourceTree = "<group>"; };
 		395E8CBE2B55029000AA69F9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		395E8CC02B550A2000AA69F9 /* TravelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelEnum.swift; sourceTree = "<group>"; };
+		395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
+		395E8CC52B55537600AA69F9 /* Theater.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Theater.storyboard; sourceTree = "<group>"; };
+		395E8CC72B55566100AA69F9 /* TheaterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheaterData.swift; path = ../../../../../Downloads/TheaterData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +240,7 @@
 		393C60952B49934A00F97898 /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				395E8CC22B55534000AA69F9 /* Movie */,
 				39118A992B5126090031E2F1 /* Chat */,
 				39118A7D2B5009B80031E2F1 /* Detail */,
 				391F31FF2B4D5B93006DA19B /* Travel3 */,
@@ -254,6 +261,16 @@
 				395E8CBE2B55029000AA69F9 /* Protocol.swift */,
 			);
 			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		395E8CC22B55534000AA69F9 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */,
+				395E8CC72B55566100AA69F9 /* TheaterData.swift */,
+				395E8CC52B55537600AA69F9 /* Theater.storyboard */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				393C60A32B49934C00F97898 /* LaunchScreen.storyboard in Resources */,
+				395E8CC62B55537600AA69F9 /* Theater.storyboard in Resources */,
 				39118AA12B5128560031E2F1 /* ChatTableViewCell.xib in Resources */,
 				39118AB72B514D430031E2F1 /* ChatDetailUserTableViewCell.xib in Resources */,
 				391F31FC2B4D4C85006DA19B /* Travel2CollectionViewCell.xib in Resources */,
@@ -371,11 +389,13 @@
 				395E8CA82B542CBB00AA69F9 /* StringExtension.swift in Sources */,
 				39118AA72B51362C0031E2F1 /* ChatDetailViewController.swift in Sources */,
 				39118A8F2B502BE80031E2F1 /* ADViewController.swift in Sources */,
+				395E8CC42B55536C00AA69F9 /* TheaterMapViewController.swift in Sources */,
 				391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */,
 				393C60972B49934A00F97898 /* AppDelegate.swift in Sources */,
 				391F31FB2B4D4C85006DA19B /* Travel2CollectionViewCell.swift in Sources */,
 				391F31EA2B4D3105006DA19B /* TravelCollectionViewCell.swift in Sources */,
 				391F31E82B4D30D7006DA19B /* TravelCollectionViewController.swift in Sources */,
+				395E8CC82B55566100AA69F9 /* TheaterData.swift in Sources */,
 				39118A342B4EB8700031E2F1 /* MagazineExtension.swift in Sources */,
 				391F31EC2B4D39C7006DA19B /* CityInfo.swift in Sources */,
 				39118AA32B5128DB0031E2F1 /* ChatViewController.swift in Sources */,
