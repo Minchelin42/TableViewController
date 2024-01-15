@@ -8,7 +8,7 @@
 import UIKit
 
 class TravelDetailViewController: UIViewController, ViewProtocol {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()

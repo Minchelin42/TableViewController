@@ -11,6 +11,8 @@ class Travel3ViewController: UIViewController {
 
     var navigationTitleString: String = "인기 도시"
     
+    var changeString = ""
+    
     var city: [City] = CityInfo().city {
         didSet {
             cityCollectionView.reloadData()
@@ -87,6 +89,8 @@ extension Travel3ViewController {
     
     func filterCity(selectIndex: Int, text: String){
         
+        let upperText = text.uppercased()
+        
         var filterData: [City] = []
         
         var compareCity: [City]  = []
@@ -99,8 +103,9 @@ extension Travel3ViewController {
         }
         
         for item in compareCity {
-            if item.city_name.contains(text) || item.city_english_name.contains(text) || item.city_explain.contains(text) {
+            if (item.city_name.uppercased()).contains(upperText) || (item.city_english_name).uppercased().contains(upperText) || (item.city_explain).uppercased().contains(upperText) {
                 filterData.append(item)
+                
             }
         }
         
@@ -136,11 +141,15 @@ extension Travel3ViewController: UISearchBarDelegate {
         print(#function)
         
         let selected = selectSegment.selectedSegmentIndex
+
+        let searchString = searchBar.text!.filter { !$0.isWhitespace }
+        
+        changeString = searchString
         
         if searchBar.text == "" {
             cityReset(selected: selected)
         } else {
-            filterCity(selectIndex: selected, text: searchBar.text!)
+            filterCity(selectIndex: selected, text: searchString)
         }
 
     }
@@ -150,10 +159,14 @@ extension Travel3ViewController: UISearchBarDelegate {
         
         let selected = selectSegment.selectedSegmentIndex
         
+        let searchString = searchBar.text!.filter { !$0.isWhitespace }
+        
+        changeString = searchString
+        
         if searchBar.text == "" {
             cityReset(selected: selected)
         } else {
-            filterCity(selectIndex: selected, text: searchBar.text!)
+            filterCity(selectIndex: selected, text: searchString)
         }
         
         view.endEditing(true)
@@ -163,6 +176,7 @@ extension Travel3ViewController: UISearchBarDelegate {
         print(#function)
         
         citySearchBar.text = ""
+        changeString = ""
         
         let selected = selectSegment.selectedSegmentIndex
 
@@ -191,7 +205,9 @@ extension Travel3ViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.cityImage.kf.setImage(with: url)
 
         cell.cityLabel.text = "\(city.city_name) | \(city.city_english_name)"
+        cell.cityLabel.changeColor(engName: city.city_english_name, targetString: changeString, color: .blue)
         cell.cityListLabel.text = "\(city.city_explain)"
+        cell.cityListLabel.changeColor(engName: city.city_english_name, targetString: changeString, color: .blue)
         
         return cell
     }
@@ -203,5 +219,26 @@ extension Travel3ViewController: UICollectionViewDelegate, UICollectionViewDataS
         let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as! DetailViewController
 
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension UILabel {
+    func changeColor(engName: String,targetString: String, color: UIColor) {
+        let fullText = text ?? ""
+        var target = targetString
+        
+        let lowerString = targetString.lowercased()
+        let capitalString = targetString.capitalized
+        
+        if engName.contains(capitalString) {
+            target = capitalString
+        } else if engName.contains(lowerString) {
+            target = lowerString
+        }
+        
+        let attributedString = NSMutableAttributedString(string: fullText)
+        let range = (fullText as NSString).range(of: target)
+        attributedString.addAttribute(.foregroundColor, value: color, range: range)
+        attributedText = attributedString
     }
 }
