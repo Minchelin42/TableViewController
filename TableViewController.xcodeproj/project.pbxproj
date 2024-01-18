@@ -61,6 +61,8 @@
 		395E8CC42B55536C00AA69F9 /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */; };
 		395E8CC62B55537600AA69F9 /* Theater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395E8CC52B55537600AA69F9 /* Theater.storyboard */; };
 		395E8CC82B55566100AA69F9 /* TheaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC72B55566100AA69F9 /* TheaterData.swift */; };
+		395E8CCB2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC92B557BCC00AA69F9 /* ChatRoomDateTableViewCell.swift */; };
+		395E8CCC2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 395E8CCA2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +120,8 @@
 		395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
 		395E8CC52B55537600AA69F9 /* Theater.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Theater.storyboard; sourceTree = "<group>"; };
 		395E8CC72B55566100AA69F9 /* TheaterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheaterData.swift; path = ../../../../../Downloads/TheaterData.swift; sourceTree = "<group>"; };
+		395E8CC92B557BCC00AA69F9 /* ChatRoomDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomDateTableViewCell.swift; sourceTree = "<group>"; };
+		395E8CCA2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomDateTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				39118ABC2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib */,
 				39118AA42B512E5C0031E2F1 /* ChattingData.swift */,
 				395E8CA72B542CBB00AA69F9 /* StringExtension.swift */,
+				395E8CC92B557BCC00AA69F9 /* ChatRoomDateTableViewCell.swift */,
+				395E8CCA2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.xib */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 				39118ABE2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib in Resources */,
 				39118A9D2B5126250031E2F1 /* Chat.storyboard in Resources */,
 				39118AB32B5139580031E2F1 /* ChatDetailFriendTableViewCell.xib in Resources */,
+				395E8CCC2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.xib in Resources */,
 				393C609E2B49934A00F97898 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +385,7 @@
 				391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */,
 				391F31D22B4BF038006DA19B /* MagazineTableViewController.swift in Sources */,
 				39118AB22B5139580031E2F1 /* ChatDetailFriendTableViewCell.swift in Sources */,
+				395E8CCB2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.swift in Sources */,
 				391F32012B4D5C90006DA19B /* Travel3ViewController.swift in Sources */,
 				395E8CBF2B55029000AA69F9 /* Protocol.swift in Sources */,
 				39118AA52B512E5C0031E2F1 /* ChattingData.swift in Sources */,

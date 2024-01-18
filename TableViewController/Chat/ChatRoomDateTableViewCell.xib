@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatRoomDateTableViewCell" id="KGk-i7-Jjw" customClass="ChatRoomDateTableViewCell" customModule="TableViewController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ui1-06-Cc0">
+                        <rect key="frame" x="0.0" y="21.666666666666668" width="320" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="E37-hn-0aF"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888년 88월 88일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YI-cv-mIq">
+                        <rect key="frame" x="110" y="15" width="100" height="14.333333333333336"/>
+                        <color key="backgroundColor" red="0.33783290580000003" green="0.52849189060000001" blue="0.90386284719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="Ous-Pj-aSR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ui1-06-Cc0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Djc-we-gN2"/>
+                    <constraint firstItem="Ui1-06-Cc0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OCb-RX-vVb"/>
+                    <constraint firstItem="9YI-cv-mIq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PYa-GE-wVu"/>
+                    <constraint firstItem="9YI-cv-mIq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="S0j-Tz-Gaa"/>
+                    <constraint firstItem="Ui1-06-Cc0" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ykL-tN-gYq"/>
+                    <constraint firstAttribute="trailing" secondItem="Ui1-06-Cc0" secondAttribute="trailing" id="yuR-2t-pCP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLine" destination="Ui1-06-Cc0" id="8XD-q3-UzG"/>
+                <outlet property="newDateLabel" destination="9YI-cv-mIq" id="hxe-N8-ZUU"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -146,7 +146,7 @@ extension Travel3ViewController: UISearchBarDelegate {
         
         changeString = searchString
         
-        if searchBar.text == "" {
+        if searchBar.text!.isEmpty {
             cityReset(selected: selected)
         } else {
             filterCity(selectIndex: selected, text: searchString)
@@ -163,7 +163,7 @@ extension Travel3ViewController: UISearchBarDelegate {
         
         changeString = searchString
         
-        if searchBar.text == "" {
+        if searchBar.text!.isEmpty {
             cityReset(selected: selected)
         } else {
             filterCity(selectIndex: selected, text: searchString)

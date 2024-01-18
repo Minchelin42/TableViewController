@@ -8,7 +8,7 @@
 import UIKit
 
 class ChatDetailViewController: UIViewController, ViewProtocol {
-
+    
     @IBOutlet var chatDetailTableView: UITableView!
     
     var chatId: Int = 0
@@ -17,7 +17,7 @@ class ChatDetailViewController: UIViewController, ViewProtocol {
     @IBOutlet var inputTextField: UITextField!
     
     @IBOutlet var sendButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,7 +45,7 @@ class ChatDetailViewController: UIViewController, ViewProtocol {
         button.tintColor = .black
         navigationItem.leftBarButtonItem = button
     }
-    
+
     @objc func detailLeftBarButtonItemClicked() {
         print(#function)
 
@@ -55,25 +55,46 @@ class ChatDetailViewController: UIViewController, ViewProtocol {
 }
 
 extension ChatDetailViewController: UITableViewDelegate, UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mockChatList[chatId].chatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         let chat = mockChatList[chatId].chatList[indexPath.row]
+
+        var preChat = mockChatList[chatId].chatList[indexPath.row]
         
-        if  chat.user != .user { //상대방일 때
+        if indexPath.row > 0 {
+            preChat = mockChatList[chatId].chatList[indexPath.row - 1]
+        }
+        
+        if chat.date.updateChatRoomDate(now: chat.date, pre: preChat.date) && chat.user != .date {
+            
+            mockChatList[chatId].chatList.insert(Chat(user: .date, date: chat.date, message: ""), at: indexPath.row)
+
+            chatDetailTableView.reloadData()
+
+        } 
+
+        if chat.user == .date { //날짜 업데이트 해야할 때
+            let cell = tableView.dequeueReusableCell(withIdentifier: ChatRoomDateTableViewCell.identifier, for: indexPath) as! ChatRoomDateTableViewCell
+            
+            cell.newDateLabel.text = chat.date.changeDateStyleChatRoomDate()
+            
+            return cell
+        } else if  chat.user != .user { //상대방일 때
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatDetailFriendTableViewCell", for: indexPath) as! ChatDetailFriendTableViewCell
             
             cell.friendImage.image = UIImage(named: chat.user.profileImage)
             cell.friendName.text = chat.user.rawValue
             cell.friendChat.text = chat.message
             cell.dateLabel.text = chat.date.changeDateStyleChatRoom()
-        
+            
             return cell
             
-        } else {
+        } else { //사용자일 때
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatDetailUserTableViewCell", for: indexPath) as! ChatDetailUserTableViewCell
             
             cell.userChatLabel.text = chat.message
@@ -81,7 +102,7 @@ extension ChatDetailViewController: UITableViewDelegate, UITableViewDataSource {
             
             return cell
         }
-    
+
     }
 }
 
@@ -102,6 +123,11 @@ extension ChatDetailViewController {
         
         let xib2 = UINib(nibName: "ChatDetailUserTableViewCell", bundle: nil)
         chatDetailTableView.register(xib2, forCellReuseIdentifier: "ChatDetailUserTableViewCell")
+        
+        chatDetailTableView.allowsSelection = false
+        
+        let xib3 = UINib(nibName: "ChatRoomDateTableViewCell", bundle: nil)
+        chatDetailTableView.register(xib3, forCellReuseIdentifier: "ChatRoomDateTableViewCell")
         
         chatDetailTableView.allowsSelection = false
     }

@@ -100,3 +100,41 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
 }
+
+extension ChatViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(#function)
+    
+        let searchString = searchBar.text!.filter { !$0.isWhitespace }
+        
+        if searchBar.text!.isEmpty {
+
+        } else {
+        }
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+        
+        let searchString = searchBar.text!.filter { !$0.isWhitespace }
+        
+        if searchBar.text!.isEmpty {
+            
+        } else {
+
+        }
+        
+        view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print(#function)
+
+        
+        view.endEditing(true)
+        
+    }
+    
+}
