@@ -35,6 +35,7 @@
 		39118ABD2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118ABB2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift */; };
 		39118ABE2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39118ABC2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib */; };
 		391319682B62423F00DBA4C8 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 391319672B62423F00DBA4C8 /* Toast */; };
+		3913196A2B624D4F00DBA4C8 /* TheaterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391319692B624D4F00DBA4C8 /* TheaterManager.swift */; };
 		391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */; };
 		391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */; };
 		391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */; };
@@ -92,6 +93,7 @@
 		39118AB52B514D430031E2F1 /* ChatDetailUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailUserTableViewCell.xib; sourceTree = "<group>"; };
 		39118ABB2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailGroupTableViewCell.swift; sourceTree = "<group>"; };
 		39118ABC2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailGroupTableViewCell.xib; sourceTree = "<group>"; };
+		391319692B624D4F00DBA4C8 /* TheaterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterManager.swift; sourceTree = "<group>"; };
 		391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MagazineInfo.swift; path = ../../../../Downloads/MagazineInfo.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				39878F642B620F920060381F /* Theater.storyboard */,
 				395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */,
 				395E8CC72B55566100AA69F9 /* TheaterData.swift */,
+				391319692B624D4F00DBA4C8 /* TheaterManager.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				395E8CA82B542CBB00AA69F9 /* StringExtension.swift in Sources */,
 				39118AA72B51362C0031E2F1 /* ChatDetailViewController.swift in Sources */,
 				39118A8F2B502BE80031E2F1 /* ADViewController.swift in Sources */,
+				3913196A2B624D4F00DBA4C8 /* TheaterManager.swift in Sources */,
 				395E8CC42B55536C00AA69F9 /* TheaterMapViewController.swift in Sources */,
 				391F31D42B4BF075006DA19B /* MagazineTableViewCell.swift in Sources */,
 				393C60972B49934A00F97898 /* AppDelegate.swift in Sources */,
