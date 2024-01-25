@@ -34,6 +34,7 @@
 		39118ABA2B515DA10031E2F1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 39118AB92B515DA10031E2F1 /* IQKeyboardManagerSwift */; };
 		39118ABD2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39118ABB2B516C520031E2F1 /* ChatDetailGroupTableViewCell.swift */; };
 		39118ABE2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39118ABC2B516C520031E2F1 /* ChatDetailGroupTableViewCell.xib */; };
+		391319682B62423F00DBA4C8 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 391319672B62423F00DBA4C8 /* Toast */; };
 		391F31C52B4A92E4006DA19B /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C42B4A92E4006DA19B /* TodoTableViewController.swift */; };
 		391F31C92B4A95E6006DA19B /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31C82B4A95E6006DA19B /* TodoTableViewCell.swift */; };
 		391F31D02B4BEE8B006DA19B /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F31CF2B4BEE8B006DA19B /* MagazineInfo.swift */; };
@@ -59,10 +60,10 @@
 		395E8CBF2B55029000AA69F9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CBE2B55029000AA69F9 /* Protocol.swift */; };
 		395E8CC12B550A2000AA69F9 /* TravelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC02B550A2000AA69F9 /* TravelEnum.swift */; };
 		395E8CC42B55536C00AA69F9 /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */; };
-		395E8CC62B55537600AA69F9 /* Theater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395E8CC52B55537600AA69F9 /* Theater.storyboard */; };
 		395E8CC82B55566100AA69F9 /* TheaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC72B55566100AA69F9 /* TheaterData.swift */; };
 		395E8CCB2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E8CC92B557BCC00AA69F9 /* ChatRoomDateTableViewCell.swift */; };
 		395E8CCC2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 395E8CCA2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.xib */; };
+		39878F652B620F920060381F /* Theater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39878F642B620F920060381F /* Theater.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,10 +119,10 @@
 		395E8CBE2B55029000AA69F9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		395E8CC02B550A2000AA69F9 /* TravelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelEnum.swift; sourceTree = "<group>"; };
 		395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
-		395E8CC52B55537600AA69F9 /* Theater.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Theater.storyboard; sourceTree = "<group>"; };
 		395E8CC72B55566100AA69F9 /* TheaterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheaterData.swift; path = ../../../../../Downloads/TheaterData.swift; sourceTree = "<group>"; };
 		395E8CC92B557BCC00AA69F9 /* ChatRoomDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomDateTableViewCell.swift; sourceTree = "<group>"; };
 		395E8CCA2B557BCC00AA69F9 /* ChatRoomDateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomDateTableViewCell.xib; sourceTree = "<group>"; };
+		39878F642B620F920060381F /* Theater.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Theater.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391319682B62423F00DBA4C8 /* Toast in Frameworks */,
 				39118A942B5110460031E2F1 /* Kingfisher in Frameworks */,
 				39118ABA2B515DA10031E2F1 /* IQKeyboardManagerSwift in Frameworks */,
 			);
@@ -272,9 +274,9 @@
 		395E8CC22B55534000AA69F9 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				39878F642B620F920060381F /* Theater.storyboard */,
 				395E8CC32B55536C00AA69F9 /* TheaterMapViewController.swift */,
 				395E8CC72B55566100AA69F9 /* TheaterData.swift */,
-				395E8CC52B55537600AA69F9 /* Theater.storyboard */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -298,6 +300,7 @@
 			packageProductDependencies = (
 				39118A932B5110460031E2F1 /* Kingfisher */,
 				39118AB92B515DA10031E2F1 /* IQKeyboardManagerSwift */,
+				391319672B62423F00DBA4C8 /* Toast */,
 			);
 			productName = TableViewController;
 			productReference = 393C60932B49934A00F97898 /* TableViewController.app */;
@@ -330,6 +333,7 @@
 			packageReferences = (
 				39118A922B5110460031E2F1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				39118AB82B515DA10031E2F1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				391319662B62423F00DBA4C8 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = 393C60942B49934A00F97898 /* Products */;
 			projectDirPath = "";
@@ -346,10 +350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				393C60A32B49934C00F97898 /* LaunchScreen.storyboard in Resources */,
-				395E8CC62B55537600AA69F9 /* Theater.storyboard in Resources */,
 				39118AA12B5128560031E2F1 /* ChatTableViewCell.xib in Resources */,
 				39118AB72B514D430031E2F1 /* ChatDetailUserTableViewCell.xib in Resources */,
 				391F31FC2B4D4C85006DA19B /* Travel2CollectionViewCell.xib in Resources */,
+				39878F652B620F920060381F /* Theater.storyboard in Resources */,
 				393C60A02B49934C00F97898 /* Assets.xcassets in Resources */,
 				39118A7F2B5009CF0031E2F1 /* Detail.storyboard in Resources */,
 				39118A832B5009F30031E2F1 /* DetailTableViewCell.xib in Resources */,
@@ -645,6 +649,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		391319662B62423F00DBA4C8 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -657,6 +669,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 39118AB82B515DA10031E2F1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		391319672B62423F00DBA4C8 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 391319662B62423F00DBA4C8 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

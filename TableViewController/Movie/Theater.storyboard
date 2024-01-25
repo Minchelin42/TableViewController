@@ -18,21 +18,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2i-cK-WQm">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="133" width="393" height="685"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iS-sQ-jyJ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="appearLocation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="phk-d0-sln"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="T2i-cK-WQm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HeY-Kd-4Ow"/>
-                            <constraint firstItem="T2i-cK-WQm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Yni-PH-ROP"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="T2i-cK-WQm" secondAttribute="trailing" id="hS1-Cs-oTC"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="T2i-cK-WQm" secondAttribute="bottom" id="rkD-av-cz6"/>
+                            <constraint firstItem="T2i-cK-WQm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CM3-8E-esQ"/>
+                            <constraint firstItem="T2i-cK-WQm" firstAttribute="top" secondItem="1iS-sQ-jyJ" secondAttribute="bottom" id="OH7-4i-dEV"/>
+                            <constraint firstItem="T2i-cK-WQm" firstAttribute="top" secondItem="1iS-sQ-jyJ" secondAttribute="bottom" id="Ww7-So-iXY"/>
+                            <constraint firstItem="T2i-cK-WQm" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="dQw-TT-oNM"/>
+                            <constraint firstItem="1iS-sQ-jyJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="duU-mH-wpZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1iS-sQ-jyJ" secondAttribute="trailing" id="wNn-FJ-K4s"/>
+                            <constraint firstItem="1iS-sQ-jyJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wsc-1s-OIf"/>
+                            <constraint firstItem="T2i-cK-WQm" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="yd9-ih-0aD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aYj-4I-NGy"/>
                     <connections>
+                        <outlet property="locationButton" destination="1iS-sQ-jyJ" id="8kY-Qp-GKG"/>
                         <outlet property="theaterMapView" destination="T2i-cK-WQm" id="ua1-kk-KGk"/>
                     </connections>
                 </viewController>
